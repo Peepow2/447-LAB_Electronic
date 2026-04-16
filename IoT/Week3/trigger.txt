@@ -1,0 +1,17 @@
+สร้าง trigger ที่ชื่อว่า LED_ON และ LED_OFF
+
+{
+  "enabled": true,
+  "trigger": [
+    {
+      "action": "LED_ON",
+      "event": "SHADOW.UPDATED",
+      "condition": "$NEW.altitude > $PREV.altitude"
+    },
+    {
+      "action": "LED_OFF",
+      "event": "SHADOW.UPDATED",
+      "condition": "$NEW.altitude < $$PREV.altitude"
+    }
+  ]
+}

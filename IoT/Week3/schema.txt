@@ -1,0 +1,25 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "pressure": {},
+    "altitude": {
+      "operation": {
+        "store": {
+          "ttl": "7d"
+        },
+        "transform": {
+          "expression": "44330.0 * (1 - ((($.pressure)/1013.25)^0.1903))"
+        }
+      },
+      "type": "number"
+    },
+    "led": {
+      "operation": {
+        "store": {
+          "ttl": "7d"
+        }
+      },
+      "type": "string"
+    }
+  }
+}

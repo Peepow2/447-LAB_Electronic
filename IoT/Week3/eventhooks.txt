@@ -1,0 +1,21 @@
+สร้าง hook ชื่อว่า LED_ON
+{
+  "uri": "https://api.netpie.io/v2/device/message?topic=led",
+  "method": "PUT",
+  "header": {
+    "Authorization": "Basic ***BASE64ENCODEofClientID:Token***",
+    "Content-Type": "text/plain"
+  },
+  "body": "on"
+}
+
+สร้าง hook ชื่อว่า LED_OFF
+{
+  "uri": "https://api.netpie.io/v2/device/message?topic=led",
+  "method": "PUT",
+  "header": {
+    "Authorization": "Basic ***BASE64ENCODEofClientID:Token***",
+    "Content-Type": "text/plain"
+  },
+  "body": "off"
+}
